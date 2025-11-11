@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: black;
+    background-image: url("bgslab.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#titleBackground {
+    justify-content: center;
+    padding: 20px 40px;
+    margin: 10px;
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#info{
+    justify-content: center;
+    padding: 20px 40px;
+    margin: 10px;
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#info1 {
+    font-size: 25px;
+}
+
+#introtext {
+    font-size: 30px;
+}
+
+#purchase {
+    overflow: hidden;
+    position: relative;
+    /* justify-content: center; */
+}
+
+button {
+    padding: 10px 10px;
+    color: #484848;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    position: absolute;
+    color: #ff5a5f;
+    transform: translateX(-50%) scale(1.2);
+}
+
+#bgImg {
+    height: 650px;
+    width: 70%;
+    object-fit: cover;
+}
+
+#foot{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 40px;
+    margin: 10px;
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.6);
+    bottom: 30px;
+}
+
+/* #p1 {
+    position: absolute;
+    left: 20%;
+}
+
+#p2 {
+    position: absolute;
+    left: 40%;
+}
+
+#p3 {
+    position: absolute;
+    left: 60%;
+}
+
+#p4 {
+    position: absolute;
+    left: 80%;
+} */
+
+#foot div {
+    padding: auto;
+    flex: 0 0 20%;
+    max-width: 100%;
+}
+
+#titleBackground, #info {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#titleBackground:hover, #info:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        0 12px 20px rgba(0, 0, 0, 0.4);
+}

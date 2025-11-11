@@ -1,0 +1,118 @@
+body {
+    box-sizing: border-box;
+    background-image: url("bgslab.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#titleBackground {
+    text-align: center;
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#theMotherDiv {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 150vh;
+}
+
+#color {
+    font-size: 20px;
+}
+
+.text {
+    background-color: lightgrey;
+    flex: 0 0 50%;
+    max-width: 49%;
+    font-size: 30px;
+    border: 3px solid black;
+    height: 500px;
+    padding-top: 10px;
+}
+
+.color-wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #ff0000 0deg,
+        #ffff00 60deg,
+        #00ff00 120deg,
+        #00ffff 180deg,
+        #0000ff 240deg,
+        #ff00ff 300deg,
+        #ff0000 360deg
+    );
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+}
+
+/* depth styling */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+#depth {
+    text-align: center;
+}
+
+#paddington {
+    padding-left: 10%;
+    padding-top: 10px;
+}
+
+.pad {
+    padding-left: 10px;
+}
+
+#shapeCont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#checkbox1, #checkbox2 {
+    flex: 0 0 45%;
+    max-width: 50%;
+}
+
+#checkbox1 {
+    padding-left: 10px;
+    padding-top: auto;
+}
+

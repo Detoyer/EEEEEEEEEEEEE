@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <script type="py" src="../py/W19_22.py"></script>
+</head>
+<body>
+    <div>
+        <div id="titleBackground">
+            <h1>The Slab Lab</h1>
+            <h2>Purchasing</h2>
+        </div>
+
+        <div id="theMotherDiv">
+            <div class="text">Please select your slab color of choice:
+                <select id="color">
+                    <option value="" disabled selected>Color of slab:</option>
+                    <option value="1">Grey</option>
+                    <option value="2">Red</option>
+                    <option value="2">Green</option>
+                    <option value="3">Custom</option>
+                </select>
+                <div class="color-wheel"></div>
+            </div>
+
+            <p></p>
+
+            <div class="text">Please select the depth of the slab (mm):
+                <!-- <select id="depth">
+                    <option value="" disabled selected>Depth of slab:</option>
+                    <option value="38">38mm</option>
+                    <option value="45">45mm</option>
+                </select> -->
+                
+                <p></p>
+                <p></p>
+                <p></p> 
+                <p></p>
+                <div id="paddington">
+                    <label class="container"><div id="pad">38mm</div>
+                        <input type="radio"  name="radio" value="38">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><div id="pad">45mm</div>
+                        <input type="radio" name="radio" value="45">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="text" id="shapeCont">Please select the shape and size of the slab (mm):
+                <!-- <select id="shapeSize">
+                    <option value="" disabled selected>Shape and Size of slab:</option>
+                    <option value="1">Square, 600 x 600</option>
+                    <option value="2">Square, 450 x 450</option>
+                    <option value="3">Rectangle, 600 x 700</option>
+                    <option value="4">Rectangle, 600 x 450</option>
+                    <option value="5">Round, Diameter of 300</option>
+                    <option value="6">Round, Diameter of 450</option>
+                </select> -->
+
+                <div id="checkbox1">
+                    <label class="container shape">
+                        <div class="pad">Square</div>
+                        <input type="radio"  name="radio" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container shape" >
+                        <div class="pad">Rectangle</div>
+                        <input type="radio" name="radio" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container shape">
+                        <div class="pad">Circle</div>
+                        <input type="radio"  name="radio" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div id="checkbox2">
+                    <!-- <label class="container"><div id="pad">600 x 600</div>
+                        <input type="radio"  name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><div id="pad">450 x 450</div>
+                        <input type="radio" name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><div id="pad">600 x 700</div>
+                        <input type="radio"  name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"><div id="pad">600 x 450</div>
+                        <input type="radio"  name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><div id="pad">Diameter of 300</div>
+                        <input type="radio" name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><div id="pad">Diameter of 450</div>
+                        <input type="radio"  name="radio" value="tbd">
+                        <span class="checkmark"></span>
+                    </label> -->
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="text">Please select the quality of concrete:
+                <select name="" id="grade">
+                    <option value="" disabled selected>Please select the quality of the concrete provided:</option>
+                    <option value="1">Base quality concrete</option>
+                    <option value="2">High quality concrete</option>
+                </select>            
+            </div>
+
+            <p></p>
+
+            <div class="text">Please select the amount of slabs that you want (Please note that orders are only supplied in multiples of 20 slabs. Numbers below 0 or above 100 will not be processed)
+                Input the amount of slabs:
+                <input id="numofslabs">
+                <button id="calculate">Calculate total price:</button>
+            </div>
+
+            <p></p>
+
+            <div class="text" id="price">Price: </div>
+        </div>
+    </div>
+</body>
+</html>
