@@ -125,6 +125,25 @@ def calculateprice(color,depth,shapeSize,grade,numofslabs):
 #     numofslabs = document.getElementById("numofslabs").value
 #     calculateprice(int(color),int(depth),int(shapeSize),int(grade),int(numofslabs))
 
+def showPrice():
+    color = document.getElementById("color").value
+    depth = document.getElementById("depth").value
+    shapeSize = document.getElementById("shapeSize").value
+    grade = document.getElementById("grade").value
+    numofslabs = document.getElementById("numofslabs").value
+    price = 0
+    volume = calculatevolume(int(shapeSize),int(depth))
+    numofslabs = validatenumofslabs(numofslabs)
+    volume = volume * numofslabs
+    match color:
+        case 1:
+            price = (volume/100000) * 0.05
+        case 2:
+            price = (volume/100000) * 0.055
+        case 3:
+            price = ((volume/100000) * 0.0575) + 5
+        
+
 def select(event):
     # event.stopPropagation()
     event.preventDefault()
@@ -132,7 +151,7 @@ def select(event):
     child = parent.querySelector("input")
     if child.value == "1":
         text = '''<label class="container"><div id="pad">600 x 600</div>
-                        <input type="radio"  name="radio1" value="tbd">
+                        <input type="radio" class="shapeSize" name="radio1" value="tbd">
                         <span class="checkmark"></span>
                     </label>
                     
@@ -142,7 +161,7 @@ def select(event):
                     </label>'''
     elif child.value == "2":
         text = '''<label class="container"><div id="pad">600 x 700</div>
-                        <input type="radio"  name="radio1" value="tbd">
+                        <input type="radio" class="shapeSize" name="radio1" value="tbd">
                         <span class="checkmark"></span>
                     </label>
                     
@@ -152,7 +171,7 @@ def select(event):
                     </label>'''
     else:
         text = '''<label class="container"><div id="pad">Diameter of 300</div>
-                        <input type="radio"  name="radio1" value="tbd">
+                        <input type="radio" class="shapeSize" name="radio1" value="tbd">
                         <span class="checkmark"></span>
                     </label>
                     
@@ -169,30 +188,14 @@ def select(event):
 
     child.checked = True
 
-js.alert("Script is running!")  
-
-# cc = create_proxy(calculate)
+# js.alert("Script is running!")  
+js.console.log("Script is running")
 
 click = create_proxy(select)
-
-# document.getElementById("calculate").addEventListener("click", cc)
-
-# onetwothree = document.getElementById("radio").value
-
-# js.alert(onetwothree)
-
 pad = document.getElementsByClassName("shape")
-
 for elements in pad:
     elements.addEventListener("click", click)
 
-
-
-# if onetwothree == 1:
-
-# elif onetwothree == 2:
-
-# elif onetwothree == 3:
-
-# else:
-
+calc = create_proxy(showPrice)
+variable1 = document.getElementById("calculate")
+variable1.addEventListener("click", calc)
